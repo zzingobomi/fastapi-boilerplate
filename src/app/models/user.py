@@ -46,4 +46,6 @@ class User(Base):
         ForeignKey("tier.id"), index=True, default=None, init=False
     )
 
-    test_column: Mapped[str] = mapped_column(String(30), nullable=True, default=Null)
+    test_column: Mapped[str | None] = mapped_column(
+        String(30), nullable=True, default=None
+    )
