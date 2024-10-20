@@ -1,3 +1,5 @@
+import uvicorn
+
 from .api import router
 from .core.config import settings
 from .core.setup import create_application
@@ -8,6 +10,12 @@ from .core.setup import create_application
 # from fastapi.encoders import jsonable_encoder
 
 app = create_application(router=router, settings=settings)
+
+
+def start():
+    """Launched with `poetry run start` at root level"""
+    uvicorn.run("src.app.main:app", host="0.0.0.0", port=8000, reload=True)
+
 
 # -------------- custom exception handlers --------------
 # @app.exception_handler(RequestValidationError)

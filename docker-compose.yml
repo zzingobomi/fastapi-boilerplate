@@ -48,6 +48,15 @@ services:
     ports:
       - 5432:5432
 
+  mysql:
+    image: mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql-data:/var/lib/mysql
+    env_file:
+      - ./src/.env
+
   redis:
     image: redis:alpine
     volumes:
@@ -110,5 +119,6 @@ services:
   #     - ./src:/code/src
 
 volumes:
+  mysql-data:
   postgres-data:
   redis-data:

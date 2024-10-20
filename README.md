@@ -22,7 +22,6 @@ poetry run python -m src.scripts.create_seed_user
 - asyncio.gather 을 이용해서 실행하는데 왜 실행시간이 오래 걸릴까? 100명의 요청을 한번에 보내니까 시간은 1명 걸리는 것처럼 나와야 할거 같은데..
 - 요청은 한번에 다 보냈는데 db 에서 처리하는 시간이 걸리는 것일까?
 
-## fastCRUD
+## TODO
 
-- db 로 sql 날릴때 어떻게 보내는지 로그는 어디에서 확인?
-- fastcrud = "^0.15.1" 에서만 되는거 진짜 맞나?
+- postgres mysql 로 변경하기
