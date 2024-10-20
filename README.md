@@ -6,6 +6,7 @@
 - migration이 시간순서대로 쌓기기 위해 alembic.ini 파일의 file_template 을 변경한다
 - migration 파일을 만든다
   ```
+  cd src
   poetry run alembic revision --autogenerate -m "message"
   ```
 - migration 을 적용한다

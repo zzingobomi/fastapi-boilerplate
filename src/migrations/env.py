@@ -18,7 +18,7 @@ config = context.config
 
 config.set_main_option(
     "sqlalchemy.url",
-    f"{settings.POSTGRES_ASYNC_PREFIX}{settings.POSTGRES_USER}:{settings.POSTGRES_PASSWORD}@localhost/{settings.POSTGRES_DB}",
+    f"{settings.MYSQL_ASYNC_PREFIX}{settings.MYSQL_USER}:{settings.MYSQL_PASSWORD}@localhost/{settings.MYSQL_DATABASE}",
 )
 
 # Interpret the config file for Python logging.

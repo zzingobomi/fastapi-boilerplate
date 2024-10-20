@@ -15,4 +15,4 @@ class Test(Base):
         init=False,
     )
 
-    desc: Mapped[str] = mapped_column(String(1024))
+    desc: Mapped[str] = mapped_column(String(255))
